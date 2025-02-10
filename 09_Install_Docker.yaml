@@ -7,7 +7,7 @@
           - ca-certificates
           - curl
 	state: latest
-        force_apt_get: yes
+ 	force_apt_get: yes
         update_cache: true
     - name: (01) Install keyrings
       shell: install -m 0755 -d /etc/apt/keyrings
