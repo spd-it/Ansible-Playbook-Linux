@@ -9,7 +9,6 @@
         state: latest
         force_apt_get: yes
         update_cache: true
-	
     - name: (01) Install keyrings
       shell: install -m 0755 -d /etc/apt/keyrings
     - name: (02) Install Docker ca-certificates
@@ -18,7 +17,6 @@
       shell: chmod a+r /etc/apt/keyrings/docker.asc
     - name: (04) Install Docker repo
       shell: echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-      
     - name: Install required system packages
       apt:
         pkg:
