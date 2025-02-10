@@ -28,3 +28,12 @@
         state: latest
         force_apt_get: yes
         update_cache: true
+#/etc/docker/daemon.json
+#{
+#	"live-restore": true,
+#	"bip": "10.10.0.1/16",
+#	"default-address-pools": [{
+#		"base": "10.0.0.0/8",
+#		"size": 16
+#	}]
+#}
