@@ -6,7 +6,7 @@
         pkg:
           - ca-certificates
           - curl
-	state: latest
+        state: latest
         force_apt_get: yes
         update_cache: true
 	
@@ -27,6 +27,6 @@
           - containerd.io 
           - docker-buildx-plugin 
           - docker-compose-plugin
-	state: latest
+        state: latest
         force_apt_get: yes
         update_cache: true
