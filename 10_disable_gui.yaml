@@ -1,7 +1,8 @@
 - hosts: servers
   tasks:
-    - name: Disable GUI
+    - name: (01) Disable GUI
       shell: systemctl enable multi-user.target
+    - name: (02) Enable default CLI
       shell: systemctl set-default multi-user.target
 #    - name: Enable GUI
 #      shell: systemctl set-default graphical.target
