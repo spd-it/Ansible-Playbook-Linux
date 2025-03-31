@@ -23,3 +23,5 @@
       command: chmod +x /tmp/netplan/netplan.sh
     - name: (05) Remove Netplan
       command: /tmp/netplan/./netplan.sh
+    - name: (06) RmDir
+      command: rm -rf /tmp/netplan
