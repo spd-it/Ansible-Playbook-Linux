@@ -9,9 +9,9 @@
          - timescaledb-2-postgresql-16='2.15.*' 
          - timescaledb-2-loader-postgresql-16='2.15.*' 
          - postgresql-client-16
-           state: latest
-           force_apt_get: yes
-           update_cache: true
+         state: latest
+         force_apt_get: yes
+         update_cache: true
     - name: (04-3) Install TimescalrDB
       command: timescaledb-tune --quiet --yes --dry-run >> /path/to/postgresql.conf
     - name: (04-4) Install TimescalrDB
