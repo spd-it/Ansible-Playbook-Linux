@@ -55,8 +55,3 @@
       # sudo -u postgres createuser --pwprompt zabbix
       # sudo -u postgres createdb -O zabbix zabbix
       # zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-    - name: (04-1) Install TimescaleDB
-      command: echo "deb https://packagecloud.io/timescale/timescaledb/ubuntu/ $(lsb_release -c -s) main" > /etc/apt/sources.list.d/timescaledb.list
-    - name: (04-2) Install TimescaleDB
-      apt:
-        update_cache: true
