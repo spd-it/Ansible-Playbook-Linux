@@ -4,17 +4,16 @@
     - name: (04-1) Install TimescaleDB
       command: echo "deb https://packagecloud.io/timescale/timescaledb/ubuntu/ $(lsb_release -c -s) main" > /etc/apt/sources.list.d/timescaledb.list
     - name: (04-2) Install TimescaleDB
-      apt:
-        update_cache: true
-    - name: (04-3) Install TimescaleDB
       apt: 
          pkg: 
          - timescaledb-2-postgresql-16='2.15.*' 
          - timescaledb-2-loader-postgresql-16='2.15.*' 
          - postgresql-client-16
-    - name: (04-4) Install TimescalrDB
+           state: latest
+           force_apt_get: yes
+           update_cache: true
+    - name: (04-3) Install TimescalrDB
       command: timescaledb-tune --quiet --yes --dry-run >> /path/to/postgresql.conf
-    - name: (04-5) Install TimescalrDB
+    - name: (04-4) Install TimescalrDB
       command: echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | sudo -u postgres psql zabbix
-    - name: (04-6) Install TimescalrDB
-      command: cat /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql | sudo -u zabbix psql zabbix
+# cat /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql | sudo -u zabbix psql zabbix
