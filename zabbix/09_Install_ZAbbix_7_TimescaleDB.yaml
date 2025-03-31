@@ -2,7 +2,7 @@
 - hosts: monitor-db-01
   tasks:
     - name: (04-1) Install TimescaleDB
-      command: echo "deb https://packagecloud.io/timescale/timescaledb/ubuntu/ $(lsb_release -c -s) main" > /etc/apt/sources.list.d/timescaledb.list
+      command: echo "deb https://packagecloud.io/timescale/timescaledb/debian/ $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/timescaledb.list
     - name: (04-2) Install TimescaleDB
       command: apt update
     - name: (04-2) Install TimescaleDB
