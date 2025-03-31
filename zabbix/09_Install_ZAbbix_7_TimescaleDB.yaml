@@ -4,8 +4,6 @@
     - name: (04-1) Install TimescaleDB
       command: echo "deb https://packagecloud.io/timescale/timescaledb/debian/ $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/timescaledb.list
     - name: (04-2) Install TimescaleDB
-      command: apt update
-    - name: (04-2) Install TimescaleDB
       apt: 
          pkg: 
          - timescaledb-2-postgresql-16='2.15.*' 
