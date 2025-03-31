@@ -4,9 +4,7 @@
     - name: (04-1) Install TimescaleDB
       command: echo "deb https://packagecloud.io/timescale/timescaledb/ubuntu/ $(lsb_release -c -s) main" > /etc/apt/sources.list.d/timescaledb.list
     - name: (04-2) Install TimescaleDB
-      apt:
-        pkg:
-        update_cache: true
+      command: apt update
     - name: (04-2) Install TimescaleDB
       apt: 
          pkg: 
