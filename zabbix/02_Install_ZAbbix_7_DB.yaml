@@ -41,7 +41,7 @@
       apt:
         pkg:
           - zabbix-server-pgsql
-          - php8.1-pgsql
+          - php8.3-pgsql
           - zabbix-sql-scripts 
           - zabbix-agent
         state: latest
