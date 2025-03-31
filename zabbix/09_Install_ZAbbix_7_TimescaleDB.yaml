@@ -14,6 +14,6 @@
          update_cache: true
     - name: (03-3) Install TimescalrDB
       command: timescaledb-tune --quiet --yes --dry-run >> /path/to/postgresql.conf
-    - name: (04-4) Install TimescalrDB
-      command: echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | sudo -u postgres psql zabbix
+#    - name: (04-4) Install TimescalrDB
+#     command: echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | sudo -u postgres psql zabbix
 # cat /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql | sudo -u zabbix psql zabbix
