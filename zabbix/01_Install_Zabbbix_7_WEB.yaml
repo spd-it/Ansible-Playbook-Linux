@@ -35,7 +35,7 @@
     - name: (02-2) Install Repo Zabbix 7
       command: wget -P /tmp/zabbix7 https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
     - name: (02-3) Install Repo Zabbix 7
-      command: dpkg -i /tmp/zabbix7/zabbix-release_7.0-2+ubuntu22.04_all.deb
+      command: dpkg -i /tmp/zabbix7/zabbix-release_7.0-2+ubuntu24.04_all.deb
     - name: (03) Install required system packages Zabbix
       apt:
         pkg:
