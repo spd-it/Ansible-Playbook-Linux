@@ -36,6 +36,8 @@
       command: wget -P /tmp/zabbix7 https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu24.04_all.deb
     - name: (02-3) Install Repo Zabbix 7
       command: dpkg -i /tmp/zabbix7/zabbix-release_7.0-2+ubuntu24.04_all.deb
+    - name: (02-4) Install Repo Zabbix 7
+      command: rm -rf /tmp/zabbix7
     - name: (03) Install required system packages Zabbix
       apt:
         pkg:
@@ -49,7 +51,7 @@
         force_apt_get: yes
         update_cache: true
     - name: Change DB ip
-      command: sed -i 's/^# DBHost=localhost/DBHost=10.80.6.123/g' /etc/zabbix/zabbix_server.conf
+      command: sed -i 's/^# DBHost=localhost/DBHost=10.25.15.23/g' /etc/zabbix/zabbix_server.conf
     - name: Enable service Zabbix, in all cases
       service:
         name: apache2
