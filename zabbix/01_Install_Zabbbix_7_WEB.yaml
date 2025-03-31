@@ -45,7 +45,7 @@
           - zabbix-apache-conf 
           - zabbix-agent
           - zabbix-server-pgsql
-          - php8.1-pgsql
+          - php8.3-pgsql
           - zabbix-sql-scripts 
         state: latest
         force_apt_get: yes
