@@ -1,4 +1,4 @@
-- hosts: monitor-db-01
+- hosts: monitor-01
   tasks:
     - name: (01) Install required system packages
       apt:
