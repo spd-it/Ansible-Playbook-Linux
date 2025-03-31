@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #ip=10.80.6.123
-ip=10.80.6.122
-gw=10.80.6.1
+ip=10.25.15.22
+gw=10.25.15.1
 #interface=ens32
 interface=ens192
 
