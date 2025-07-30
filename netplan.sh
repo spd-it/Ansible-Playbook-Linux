@@ -1,9 +1,10 @@
 #!/bin/bash
 
 #ip=10.80.6.123
-ip=10.25.15.23
-gw=10.25.15.1
-interface=ens32
+ip=10.80.15.12
+gw=10.80.15.1
+interface=ens160
+#interface=ens32
 #interface=ens192
 
 cd /etc/default/
